@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
 
   <title>Dui Bu Qi 🤍</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- GOOGLE FONT -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
@@ -23,44 +40,203 @@
       box-sizing: border-box;
     }
 
+
     :root {
+
       --bg-1: #fff8f8;
+
       --bg-2: #f8f2ff;
+
       --primary: #a66cff;
+
       --text: #29232f;
+
       --muted: #7d7485;
-      --white: rgba(255, 255, 255, 0.78);
+
+      --white:
+        rgba(
+          255,
+          255,
+          255,
+          0.78
+        );
+
     }
 
+
     body {
+
       min-height: 100vh;
+
       overflow-x: hidden;
 
-      font-family: "DM Sans", sans-serif;
-      color: var(--text);
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      color:
+        var(--text);
 
       background:
+
         radial-gradient(
           circle at 10% 20%,
-          rgba(255, 192, 203, 0.35),
+          rgba(
+            255,
+            192,
+            203,
+            0.35
+          ),
           transparent 30%
         ),
+
         radial-gradient(
           circle at 90% 80%,
-          rgba(190, 170, 255, 0.35),
+          rgba(
+            190,
+            170,
+            255,
+            0.35
+          ),
           transparent 30%
         ),
+
         linear-gradient(
           135deg,
           var(--bg-1),
           var(--bg-2)
         );
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display:
+        flex;
 
-      padding: 30px;
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        30px;
+
+    }
+
+
+    /* =================================
+       MUSIC BUTTON
+    ================================= */
+
+    .music-btn {
+
+      position:
+        fixed;
+
+      top:
+        20px;
+
+      right:
+        20px;
+
+      z-index:
+        100;
+
+      padding:
+        12px 18px;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.8
+        );
+
+      border-radius:
+        999px;
+
+      color:
+        #5f5269;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.75
+        );
+
+      backdrop-filter:
+        blur(15px);
+
+      -webkit-backdrop-filter:
+        blur(15px);
+
+      box-shadow:
+        0 10px 30px
+        rgba(
+          80,
+          50,
+          100,
+          0.12
+        );
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size:
+        13px;
+
+      font-weight:
+        700;
+
+      cursor:
+        pointer;
+
+      transition:
+
+        transform
+        0.25s
+        ease,
+
+        box-shadow
+        0.25s
+        ease;
+
+    }
+
+
+    .music-btn:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 15px 35px
+        rgba(
+          80,
+          50,
+          100,
+          0.18
+        );
+
+    }
+
+
+    .music-btn.playing {
+
+      color:
+        white;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          #a66cff,
+          #d277ff
+        );
+
     }
 
 
@@ -70,68 +246,129 @@
 
     .hearts {
 
-      position: fixed;
+      position:
+        fixed;
 
-      inset: 0;
+      inset:
+        0;
 
-      pointer-events: none;
+      pointer-events:
+        none;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      z-index: 0;
+      z-index:
+        0;
+
     }
+
 
     .heart {
 
-      position: absolute;
+      position:
+        absolute;
 
-      bottom: -50px;
+      bottom:
+        -50px;
 
-      font-size: 20px;
+      font-size:
+        20px;
 
-      opacity: 0;
+      opacity:
+        0;
 
       animation:
         floatHeart
         linear
         infinite;
+
     }
+
 
     .heart:nth-child(1) {
-      left: 8%;
-      animation-duration: 8s;
-      animation-delay: 1s;
+
+      left:
+        8%;
+
+      animation-duration:
+        8s;
+
+      animation-delay:
+        1s;
+
     }
+
 
     .heart:nth-child(2) {
-      left: 20%;
-      animation-duration: 10s;
-      animation-delay: 3s;
+
+      left:
+        20%;
+
+      animation-duration:
+        10s;
+
+      animation-delay:
+        3s;
+
     }
+
 
     .heart:nth-child(3) {
-      left: 35%;
-      animation-duration: 7s;
-      animation-delay: 0s;
+
+      left:
+        35%;
+
+      animation-duration:
+        7s;
+
+      animation-delay:
+        0s;
+
     }
+
 
     .heart:nth-child(4) {
-      left: 55%;
-      animation-duration: 11s;
-      animation-delay: 2s;
+
+      left:
+        55%;
+
+      animation-duration:
+        11s;
+
+      animation-delay:
+        2s;
+
     }
+
 
     .heart:nth-child(5) {
-      left: 72%;
-      animation-duration: 8s;
-      animation-delay: 4s;
+
+      left:
+        72%;
+
+      animation-duration:
+        8s;
+
+      animation-delay:
+        4s;
+
     }
 
+
     .heart:nth-child(6) {
-      left: 88%;
-      animation-duration: 9s;
-      animation-delay: 1s;
+
+      left:
+        88%;
+
+      animation-duration:
+        9s;
+
+      animation-delay:
+        1s;
+
     }
+
 
     @keyframes floatHeart {
 
@@ -141,15 +378,23 @@
           translateY(0)
           rotate(0deg);
 
-        opacity: 0;
+        opacity:
+          0;
+
       }
 
       15% {
-        opacity: 0.6;
+
+        opacity:
+          0.6;
+
       }
 
       80% {
-        opacity: 0.5;
+
+        opacity:
+          0.5;
+
       }
 
       100% {
@@ -158,7 +403,9 @@
           translateY(-110vh)
           rotate(360deg);
 
-        opacity: 0;
+        opacity:
+          0;
+
       }
 
     }
@@ -170,13 +417,18 @@
 
     .container {
 
-      width: 100%;
+      width:
+        100%;
 
-      max-width: 680px;
+      max-width:
+        680px;
 
-      position: relative;
+      position:
+        relative;
 
-      z-index: 2;
+      z-index:
+        2;
+
     }
 
 
@@ -186,17 +438,26 @@
 
     .card {
 
-      position: relative;
+      position:
+        relative;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      padding: 55px 50px;
+      padding:
+        55px 50px;
 
       border:
         1px solid
-        rgba(255, 255, 255, 0.8);
+        rgba(
+          255,
+          255,
+          255,
+          0.8
+        );
 
-      border-radius: 32px;
+      border-radius:
+        32px;
 
       background:
         var(--white);
@@ -210,38 +471,55 @@
       box-shadow:
 
         0 30px 80px
-        rgba(81, 55, 110, 0.15),
+        rgba(
+          81,
+          55,
+          110,
+          0.15
+        ),
 
         inset 0 1px 0
-        rgba(255, 255, 255, 0.9);
+        rgba(
+          255,
+          255,
+          255,
+          0.9
+        );
 
-      text-align: center;
+      text-align:
+        center;
 
       animation:
         cardAppear
         1s
         ease
         forwards;
+
     }
+
 
     @keyframes cardAppear {
 
       from {
 
-        opacity: 0;
+        opacity:
+          0;
 
         transform:
           translateY(40px)
           scale(0.96);
+
       }
 
       to {
 
-        opacity: 1;
+        opacity:
+          1;
 
         transform:
           translateY(0)
           scale(1);
+
       }
 
     }
@@ -253,39 +531,68 @@
 
     .circle {
 
-      position: absolute;
+      position:
+        absolute;
 
-      border-radius: 50%;
+      border-radius:
+        50%;
 
       filter:
         blur(2px);
 
       pointer-events:
         none;
+
     }
+
 
     .circle.one {
 
-      width: 120px;
-      height: 120px;
+      width:
+        120px;
+
+      height:
+        120px;
 
       background:
-        rgba(255, 180, 200, 0.25);
+        rgba(
+          255,
+          180,
+          200,
+          0.25
+        );
 
-      top: -50px;
-      left: -40px;
+      top:
+        -50px;
+
+      left:
+        -40px;
+
     }
+
 
     .circle.two {
 
-      width: 150px;
-      height: 150px;
+      width:
+        150px;
+
+      height:
+        150px;
 
       background:
-        rgba(180, 160, 255, 0.2);
+        rgba(
+          180,
+          160,
+          255,
+          0.2
+        );
 
-      bottom: -70px;
-      right: -50px;
+      bottom:
+        -70px;
+
+      right:
+        -50px;
+
     }
 
 
@@ -314,7 +621,9 @@
         fadeIn
         0.8s
         ease;
+
     }
+
 
     .envelope {
 
@@ -337,14 +646,18 @@
         transform
         0.3s
         ease;
+
     }
+
 
     .envelope:hover {
 
       transform:
         translateY(-8px)
         scale(1.04);
+
     }
+
 
     .envelope-body {
 
@@ -364,6 +677,7 @@
         8px;
 
       background:
+
         linear-gradient(
           135deg,
           #d99cff,
@@ -371,9 +685,17 @@
         );
 
       box-shadow:
+
         0 20px 40px
-        rgba(166, 108, 255, 0.3);
+        rgba(
+          166,
+          108,
+          255,
+          0.3
+        );
+
     }
+
 
     .envelope-body::before {
 
@@ -400,7 +722,9 @@
           255,
           0.25
         );
+
     }
+
 
     .envelope-flap {
 
@@ -420,6 +744,7 @@
         70%;
 
       background:
+
         linear-gradient(
           135deg,
           #c986ff,
@@ -437,6 +762,7 @@
         top center;
 
       transition:
+
         transform
         0.8s
         cubic-bezier(
@@ -448,7 +774,9 @@
 
       z-index:
         3;
+
     }
+
 
     .envelope-heart {
 
@@ -477,21 +805,27 @@
         opacity
         0.3s
         ease;
+
     }
+
 
     .envelope.open
     .envelope-flap {
 
       transform:
         rotateX(180deg);
+
     }
+
 
     .envelope.open
     .envelope-heart {
 
       opacity:
         0;
+
     }
+
 
     .envelope-text {
 
@@ -503,6 +837,7 @@
 
       margin-top:
         5px;
+
     }
 
 
@@ -516,7 +851,9 @@
         fadeIn
         0.8s
         ease;
+
     }
+
 
     .icon {
 
@@ -543,6 +880,7 @@
         50%;
 
       background:
+
         linear-gradient(
           135deg,
           #fff,
@@ -552,7 +890,12 @@
       box-shadow:
 
         0 15px 30px
-        rgba(166, 108, 255, 0.15),
+        rgba(
+          166,
+          108,
+          255,
+          0.15
+        ),
 
         inset 0 1px 1px
         white;
@@ -565,21 +908,29 @@
         2.2s
         ease-in-out
         infinite;
+
     }
+
 
     @keyframes heartbeat {
 
-      0%, 100% {
+      0%,
+      100% {
+
         transform:
           scale(1);
+
       }
 
       50% {
+
         transform:
           scale(1.08);
+
       }
 
     }
+
 
     .small-title {
 
@@ -600,7 +951,9 @@
 
       margin-bottom:
         12px;
+
     }
+
 
     h1 {
 
@@ -620,7 +973,9 @@
 
       margin-bottom:
         22px;
+
     }
+
 
     .message {
 
@@ -638,13 +993,17 @@
 
       line-height:
         1.8;
+
     }
+
 
     .message strong {
 
       color:
         var(--text);
+
     }
+
 
     .divider {
 
@@ -662,16 +1021,18 @@
         10px;
 
       background:
+
         linear-gradient(
           90deg,
           #ff9db6,
           #a66cff
         );
+
     }
 
 
     /* =================================
-       REACTION BOX
+       REACTION
     ================================= */
 
     .reaction-box {
@@ -701,7 +1062,9 @@
           255,
           0.1
         );
+
     }
+
 
     .reaction-title {
 
@@ -713,7 +1076,9 @@
 
       margin-bottom:
         8px;
+
     }
+
 
     .reaction-subtitle {
 
@@ -725,7 +1090,9 @@
 
       margin-bottom:
         15px;
+
     }
+
 
     textarea {
 
@@ -782,7 +1149,9 @@
         box-shadow
         0.25s
         ease;
+
     }
+
 
     textarea:focus {
 
@@ -790,6 +1159,7 @@
         var(--primary);
 
       box-shadow:
+
         0 0 0 4px
         rgba(
           166,
@@ -797,12 +1167,15 @@
           255,
           0.1
         );
+
     }
+
 
     textarea::placeholder {
 
       color:
         #aaa1ae;
+
     }
 
 
@@ -832,7 +1205,9 @@
 
       gap:
         15px;
+
     }
+
 
     button {
 
@@ -871,7 +1246,9 @@
         opacity
         0.25s
         ease;
+
     }
+
 
     .yes-btn {
 
@@ -879,6 +1256,7 @@
         white;
 
       background:
+
         linear-gradient(
           135deg,
           #a66cff,
@@ -886,6 +1264,7 @@
         );
 
       box-shadow:
+
         0 12px 25px
         rgba(
           166,
@@ -893,7 +1272,9 @@
           255,
           0.3
         );
+
     }
+
 
     .yes-btn:hover:not(:disabled) {
 
@@ -902,6 +1283,7 @@
         scale(1.03);
 
       box-shadow:
+
         0 18px 35px
         rgba(
           166,
@@ -909,7 +1291,9 @@
           255,
           0.4
         );
+
     }
+
 
     .yes-btn:disabled {
 
@@ -921,7 +1305,9 @@
 
       box-shadow:
         none;
+
     }
+
 
     .no-btn {
 
@@ -949,6 +1335,7 @@
         );
 
       box-shadow:
+
         0 8px 20px
         rgba(
           60,
@@ -956,12 +1343,9 @@
           80,
           0.08
         );
+
     }
 
-
-    /* =================================
-       BUTTON HINT
-    ================================= */
 
     .button-hint {
 
@@ -978,6 +1362,7 @@
         opacity
         0.3s
         ease;
+
     }
 
 
@@ -998,7 +1383,9 @@
 
       font-size:
         13px;
+
     }
+
 
     .spinner {
 
@@ -1037,13 +1424,17 @@
 
       vertical-align:
         -2px;
+
     }
+
 
     @keyframes spin {
 
       to {
+
         transform:
           rotate(360deg);
+
       }
 
     }
@@ -1081,6 +1472,7 @@
 
       font-size:
         13px;
+
     }
 
 
@@ -1098,7 +1490,9 @@
         0.7s
         ease
         forwards;
+
     }
+
 
     @keyframes successAppear {
 
@@ -1109,6 +1503,7 @@
 
         transform:
           scale(0.9);
+
       }
 
       to {
@@ -1118,9 +1513,11 @@
 
         transform:
           scale(1);
+
       }
 
     }
+
 
     .success-icon {
 
@@ -1134,26 +1531,35 @@
         bounce
         1s
         ease;
+
     }
+
 
     @keyframes bounce {
 
       0% {
+
         transform:
           scale(0);
+
       }
 
       60% {
+
         transform:
           scale(1.2);
+
       }
 
       100% {
+
         transform:
           scale(1);
+
       }
 
     }
+
 
     .success h2 {
 
@@ -1166,6 +1572,7 @@
 
       margin-bottom:
         15px;
+
     }
 
 
@@ -1195,7 +1602,9 @@
         3s
         linear
         forwards;
+
     }
+
 
     @keyframes confettiFall {
 
@@ -1207,6 +1616,7 @@
 
         opacity:
           1;
+
       }
 
       100% {
@@ -1217,6 +1627,7 @@
 
         opacity:
           0;
+
       }
 
     }
@@ -1236,6 +1647,7 @@
 
       font-size:
         12px;
+
     }
 
 
@@ -1252,6 +1664,7 @@
 
         transform:
           translateY(15px);
+
       }
 
       to {
@@ -1261,6 +1674,7 @@
 
         transform:
           translateY(0);
+
       }
 
     }
@@ -1270,13 +1684,17 @@
        MOBILE
     ================================= */
 
-    @media (max-width: 600px) {
+    @media (
+      max-width: 600px
+    ) {
 
       body {
 
         padding:
           18px;
+
       }
+
 
       .card {
 
@@ -1286,19 +1704,25 @@
 
         border-radius:
           25px;
+
       }
+
 
       h1 {
 
         font-size:
           42px;
+
       }
+
 
       .message {
 
         font-size:
           15px;
+
       }
+
 
       .buttons {
 
@@ -1307,7 +1731,9 @@
 
         min-height:
           130px;
+
       }
+
 
       .yes-btn,
       .no-btn {
@@ -1317,12 +1743,33 @@
 
         max-width:
           250px;
+
       }
+
 
       .envelope {
 
         transform:
           scale(0.9);
+
+      }
+
+
+      .music-btn {
+
+        top:
+          12px;
+
+        right:
+          12px;
+
+        font-size:
+          12px;
+
+        padding:
+          10px
+          14px;
+
       }
 
     }
@@ -1333,16 +1780,39 @@
 
 <body>
 
-   <audio
-      id="bgMusic"
-      autoplay
-      loop
-   >
-   <source
-      src="music.mp3"
-      type="audio/mpeg"
-   >
-   </audio>
+  <!-- =================================
+       BACKGROUND MUSIC
+  ================================= -->
+
+<audio
+id="bgMusic"
+loop
+preload="auto"
+>
+
+<source
+  src="music.mp3"
+  type="audio/mpeg"
+>
+
+
+  </audio>
+
+  <!-- =================================
+       MUSIC BUTTON
+  ================================= -->
+
+<button
+id="musicBtn"
+class="music-btn"
+
+>
+
+
+🎵 Putar Musik
+
+
+  </button>
 
   <!-- =================================
        FLOATING HEARTS
@@ -1350,14 +1820,31 @@
 
   <div class="hearts">
 
-```
-<div class="heart">♡</div>
-<div class="heart">♡</div>
-<div class="heart">♡</div>
-<div class="heart">♡</div>
-<div class="heart">♡</div>
-<div class="heart">♡</div>
-```
+
+<div class="heart">
+  ♡
+</div>
+
+<div class="heart">
+  ♡
+</div>
+
+<div class="heart">
+  ♡
+</div>
+
+<div class="heart">
+  ♡
+</div>
+
+<div class="heart">
+  ♡
+</div>
+
+<div class="heart">
+  ♡
+</div>
+
 
   </div>
 
@@ -1367,8 +1854,8 @@
 
   <main class="container">
 
-```
 <div class="card">
+
 
   <div class="circle one"></div>
 
@@ -1379,18 +1866,27 @@
        ENVELOPE SCREEN
   ================================= -->
 
-  <section id="envelopeScreen">
+  <section
+    id="envelopeScreen"
+  >
+
 
     <div
       class="envelope"
       id="envelope"
     >
 
-      <div class="envelope-body"></div>
+      <div
+        class="envelope-body"
+      ></div>
 
-      <div class="envelope-flap"></div>
+      <div
+        class="envelope-flap"
+      ></div>
 
-      <div class="envelope-heart">
+      <div
+        class="envelope-heart"
+      >
         🤍
       </div>
 
@@ -1398,12 +1894,21 @@
 
 
     <h2>
+
       Ada pesan buat kamu...
+
     </h2>
 
-    <p class="envelope-text">
-      Klik amplopnya untuk membukanya 💌
+
+    <p
+      class="envelope-text"
+    >
+
+      Klik amplopnya
+      untuk membukanya 💌
+
     </p>
+
 
   </section>
 
@@ -1417,33 +1922,53 @@
     style="display: none;"
   >
 
+
     <div class="icon">
+
       🥺
+
     </div>
 
-    <p class="small-title">
+
+    <p
+      class="small-title"
+    >
+
       Sebuah pesan kecil
+
     </p>
 
+
     <h1>
+
       Dui Bu Qi
+
     </h1>
 
-    <div class="divider"></div>
+
+    <div
+      class="divider"
+    ></div>
 
 
-    <p class="message">
+    <p
+      class="message"
+    >
 
-      Sorry ya kmrn bikin rambut mu kena samballl
+      Sorry ya kmrn bikin
+      rambut mu kena samballl
 
       <br><br>
 
-      dan untuk hal hal lain yg bikin lu kesel
+      dan untuk hal hal lain
+      yg bikin lu kesel
 
       <br><br>
 
       <strong>
+
         I'm so sorry. 🤍
+
       </strong>
 
     </p>
@@ -1459,16 +1984,31 @@
       method="POST"
     >
 
-      <div class="reaction-box">
 
-        <p class="reaction-title">
+      <div
+        class="reaction-box"
+      >
+
+
+        <p
+          class="reaction-title"
+        >
+
           Apa reaksi mu? 🥺
+
         </p>
 
-        <p class="reaction-subtitle">
-          Tulis aja apa yang ada di pikiranmu.
+
+        <p
+          class="reaction-subtitle"
+        >
+
+          Tulis aja apa yang
+          ada di pikiranmu.
           Aku bakal baca.
+
         </p>
+
 
         <textarea
           id="reactionInput"
@@ -1477,25 +2017,25 @@
           required
         ></textarea>
 
+
       </div>
 
 
-      <!-- =================================
-           HIDDEN DATA
-      ================================= -->
+      <!-- FORM DATA -->
 
       <input
         type="hidden"
         name="subject"
         value="Response dari Website Dui Bu Qi"
-      />
+      >
 
 
-      <!-- =================================
-           BUTTONS
-      ================================= -->
+      <!-- BUTTONS -->
 
-      <div class="buttons">
+      <div
+        class="buttons"
+      >
+
 
         <button
           type="submit"
@@ -1503,16 +2043,22 @@
           id="yesBtn"
           disabled
         >
+
           Aku Maafin 😊
+
         </button>
+
 
         <button
           type="button"
           class="no-btn"
           id="noBtn"
         >
+
           Belum Bisa 😤
+
         </button>
+
 
       </div>
 
@@ -1521,49 +2067,57 @@
         class="button-hint"
         id="buttonHint"
       >
-        Tulis dulu apa yang ada di pikiranmu ya 🥺
+
+        Tulis dulu apa yang
+        ada di pikiranmu ya 🥺
+
       </p>
 
 
-      <!-- =================================
-           LOADING
-      ================================= -->
+      <!-- LOADING -->
 
       <p
         class="loading"
         id="loadingMessage"
       >
 
-        <span class="spinner"></span>
+        <span
+          class="spinner"
+        ></span>
 
         Mengirim pesan...
 
       </p>
 
 
-      <!-- =================================
-           ERROR
-      ================================= -->
+      <!-- ERROR -->
 
       <p
         class="error-message"
         id="errorMessage"
       >
 
-        Hmm, pesannya gagal terkirim 😭
-        Coba klik tombolnya lagi ya.
+        Hmm, pesannya gagal
+        terkirim 😭
+
+        Coba klik tombolnya
+        lagi ya.
 
       </p>
+
 
     </form>
 
 
-    <p class="footer">
+    <p
+      class="footer"
+    >
 
       dibuat dengan sedikit keberanian
       dan banyak rasa bersalah 🥲
 
     </p>
+
 
   </section>
 
@@ -1577,46 +2131,73 @@
     id="successScreen"
   >
 
-    <div class="success-icon">
+
+    <div
+      class="success-icon"
+    >
+
       🥹🤍
+
     </div>
 
+
     <h2>
+
       Yey...
+
     </h2>
 
-    <p class="message">
 
-      Terima kasih sudah memaafkan aku.
+    <p
+      class="message"
+    >
+
+      Terima kasih sudah
+      memaafkan aku.
 
       <br><br>
 
-      Aku akan berusaha supaya kejadian seperti ini
+      Aku akan berusaha supaya
+      kejadian seperti ini
       nggak terulang lagi.
 
       <br><br>
 
       <strong>
-        Jangan marah lagi ya. Kita baikan?
+
+        Jangan marah lagi ya.
+        Kita baikan?
+
       </strong>
 
     </p>
 
-    <div class="divider"></div>
 
-    <p class="footer">
+    <div
+      class="divider"
+    ></div>
+
+
+    <p
+      class="footer"
+    >
 
       Peace? ✌️🤍
 
     </p>
 
+
   </section>
 
 
 </div>
-```
+
 
   </main>
+
+  <!-- =================================
+       JAVASCRIPT
+  ================================= -->
 
   <script>
 
@@ -1625,60 +2206,144 @@
        ELEMENTS
     ================================= */
 
+    const bgMusic =
+      document.getElementById(
+        "bgMusic"
+      );
+
+
+    const musicBtn =
+      document.getElementById(
+        "musicBtn"
+      );
+
+
     const envelope =
       document.getElementById(
         "envelope"
       );
+
 
     const envelopeScreen =
       document.getElementById(
         "envelopeScreen"
       );
 
+
     const apologyScreen =
       document.getElementById(
         "apologyScreen"
       );
+
 
     const successScreen =
       document.getElementById(
         "successScreen"
       );
 
+
     const reactionForm =
       document.getElementById(
         "reactionForm"
       );
+
 
     const reactionInput =
       document.getElementById(
         "reactionInput"
       );
 
+
     const yesBtn =
       document.getElementById(
         "yesBtn"
       );
+
 
     const noBtn =
       document.getElementById(
         "noBtn"
       );
 
+
     const buttonHint =
       document.getElementById(
         "buttonHint"
       );
+
 
     const loadingMessage =
       document.getElementById(
         "loadingMessage"
       );
 
+
     const errorMessage =
       document.getElementById(
         "errorMessage"
       );
+
+
+    /* =================================
+       MUSIC PLAY / PAUSE
+    ================================= */
+
+    musicBtn.addEventListener(
+      "click",
+      function() {
+
+
+        if (
+          bgMusic.paused
+        ) {
+
+
+          bgMusic
+            .play()
+            .then(
+              function() {
+
+                musicBtn.innerHTML =
+                  "🔊 Musik Menyala";
+
+                musicBtn.classList.add(
+                  "playing"
+                );
+
+              }
+            )
+            .catch(
+              function(error) {
+
+                console.error(
+                  "Musik gagal diputar:",
+                  error
+                );
+
+              }
+            );
+
+
+        } else {
+
+
+          bgMusic.pause();
+
+
+          musicBtn.innerHTML =
+            "🎵 Putar Musik";
+
+
+          musicBtn.classList.remove(
+            "playing"
+          );
+
+
+        }
+
+
+      }
+    );
 
 
     /* =================================
@@ -1689,6 +2354,7 @@
       "click",
       function() {
 
+
         envelope.classList.add(
           "open"
         );
@@ -1697,15 +2363,19 @@
         setTimeout(
           function() {
 
+
             envelopeScreen.style.display =
               "none";
+
 
             apologyScreen.style.display =
               "block";
 
+
           },
           900
         );
+
 
       }
     );
@@ -1713,12 +2383,12 @@
 
     /* =================================
        ENABLE ACCEPT BUTTON
-       AFTER TEXTAREA IS FILLED
     ================================= */
 
     reactionInput.addEventListener(
       "input",
       function() {
+
 
         const text =
           reactionInput.value.trim();
@@ -1728,23 +2398,28 @@
           text.length > 0
         ) {
 
+
           yesBtn.disabled =
             false;
+
 
           buttonHint.style.opacity =
             "0";
 
-        }
 
-        else {
+        } else {
+
 
           yesBtn.disabled =
             true;
 
+
           buttonHint.style.opacity =
             "1";
 
+
         }
+
 
       }
     );
@@ -1756,13 +2431,16 @@
 
     function moveNoButton() {
 
+
       const container =
         document.querySelector(
           ".buttons"
         );
 
+
       const containerRect =
         container.getBoundingClientRect();
+
 
       const buttonRect =
         noBtn.getBoundingClientRect();
@@ -1774,6 +2452,7 @@
           containerRect.width -
           buttonRect.width
         );
+
 
       const maxY =
         Math.max(
@@ -1801,10 +2480,11 @@
           ${randomY}px
         )`;
 
+
     }
 
 
-    /* Desktop */
+    /* DESKTOP */
 
     noBtn.addEventListener(
       "mouseenter",
@@ -1812,15 +2492,18 @@
     );
 
 
-    /* Mobile */
+    /* MOBILE */
 
     noBtn.addEventListener(
       "touchstart",
       function(event) {
 
+
         event.preventDefault();
 
+
         moveNoButton();
+
 
       },
       {
@@ -1830,30 +2513,28 @@
 
 
     /* =================================
-       SUBMIT FORM
+       FORM SUBMIT
     ================================= */
 
     reactionForm.addEventListener(
       "submit",
       async function(event) {
 
+
         event.preventDefault();
 
-
-        /*
-          Double protection:
-          Jangan submit kalau textarea
-          masih kosong.
-        */
 
         if (
           reactionInput.value.trim()
           === ""
         ) {
 
+
           reactionInput.focus();
 
+
           return;
+
 
         }
 
@@ -1871,6 +2552,7 @@
 
 
         try {
+
 
           const formData =
             new FormData(
@@ -1905,10 +2587,6 @@
           ) {
 
 
-            /*
-              Email berhasil dikirim.
-            */
-
             apologyScreen.style.display =
               "none";
 
@@ -1923,20 +2601,22 @@
 
             createConfetti();
 
-          }
 
-          else {
+          } else {
+
 
             throw new Error(
               "Form submission failed"
             );
 
+
           }
 
 
-        }
+        } catch (
+          error
+        ) {
 
-        catch (error) {
 
           console.error(
             error
@@ -1954,7 +2634,9 @@
           yesBtn.disabled =
             false;
 
+
         }
+
 
       }
     );
@@ -1966,13 +2648,19 @@
 
     function createConfetti() {
 
+
       const symbols = [
 
         "❤️",
+
         "💖",
+
         "✨",
+
         "🤍",
+
         "🌸",
+
         "⭐"
 
       ];
@@ -1983,6 +2671,7 @@
         i < 60;
         i++
       ) {
+
 
         const confetti =
           document.createElement(
@@ -2036,7 +2725,7 @@
 
 
         setTimeout(
-          () => {
+          function() {
 
             confetti.remove();
 
@@ -2044,11 +2733,15 @@
           4000
         );
 
+
       }
 
+
     }
+
 
   </script>
 
 </body>
+
 </html>
