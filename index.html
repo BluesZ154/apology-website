@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Dui Bu Qi</title>
+  <title>Dui Bu Qi 🤍</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,6 @@
       --bg-1: #fff8f8;
       --bg-2: #f8f2ff;
       --primary: #a66cff;
-      --primary-dark: #8150dc;
       --text: #29232f;
       --muted: #7d7485;
       --white: rgba(255, 255, 255, 0.78);
@@ -70,7 +69,9 @@
     ================================= */
 
     .hearts {
+
       position: fixed;
+
       inset: 0;
 
       pointer-events: none;
@@ -81,6 +82,7 @@
     }
 
     .heart {
+
       position: absolute;
 
       bottom: -50px;
@@ -134,6 +136,7 @@
     @keyframes floatHeart {
 
       0% {
+
         transform:
           translateY(0)
           rotate(0deg);
@@ -150,6 +153,7 @@
       }
 
       100% {
+
         transform:
           translateY(-110vh)
           rotate(360deg);
@@ -161,11 +165,13 @@
 
 
     /* =================================
-       MAIN CONTAINER
+       MAIN
     ================================= */
 
     .container {
+
       width: 100%;
+
       max-width: 680px;
 
       position: relative;
@@ -202,6 +208,7 @@
         blur(25px);
 
       box-shadow:
+
         0 30px 80px
         rgba(81, 55, 110, 0.15),
 
@@ -220,6 +227,7 @@
     @keyframes cardAppear {
 
       from {
+
         opacity: 0;
 
         transform:
@@ -228,6 +236,7 @@
       }
 
       to {
+
         opacity: 1;
 
         transform:
@@ -243,6 +252,7 @@
     ================================= */
 
     .circle {
+
       position: absolute;
 
       border-radius: 50%;
@@ -280,20 +290,25 @@
 
 
     /* =================================
-       ENVELOPE SCREEN
+       ENVELOPE
     ================================= */
 
     #envelopeScreen {
 
-      min-height: 450px;
+      min-height:
+        450px;
 
-      display: flex;
+      display:
+        flex;
 
-      flex-direction: column;
+      flex-direction:
+        column;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
       animation:
         fadeIn
@@ -303,14 +318,20 @@
 
     .envelope {
 
-      position: relative;
+      position:
+        relative;
 
-      width: 190px;
-      height: 130px;
+      width:
+        190px;
 
-      margin-bottom: 35px;
+      height:
+        130px;
 
-      cursor: pointer;
+      margin-bottom:
+        35px;
+
+      cursor:
+        pointer;
 
       transition:
         transform
@@ -327,12 +348,17 @@
 
     .envelope-body {
 
-      position: absolute;
+      position:
+        absolute;
 
-      bottom: 0;
+      bottom:
+        0;
 
-      width: 100%;
-      height: 100%;
+      width:
+        100%;
+
+      height:
+        100%;
 
       border-radius:
         8px;
@@ -351,11 +377,14 @@
 
     .envelope-body::before {
 
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
       clip-path:
         polygon(
@@ -365,19 +394,30 @@
         );
 
       background:
-        rgba(255,255,255,0.25);
+        rgba(
+          255,
+          255,
+          255,
+          0.25
+        );
     }
 
     .envelope-flap {
 
-      position: absolute;
+      position:
+        absolute;
 
-      top: 0;
+      top:
+        0;
 
-      left: 0;
+      left:
+        0;
 
-      width: 100%;
-      height: 70%;
+      width:
+        100%;
+
+      height:
+        70%;
 
       background:
         linear-gradient(
@@ -406,15 +446,20 @@
           1.55
         );
 
-      z-index: 3;
+      z-index:
+        3;
     }
 
     .envelope-heart {
 
-      position: absolute;
+      position:
+        absolute;
 
-      left: 50%;
-      top: 48%;
+      left:
+        50%;
+
+      top:
+        48%;
 
       transform:
         translate(
@@ -422,9 +467,11 @@
           -50%
         );
 
-      font-size: 35px;
+      font-size:
+        35px;
 
-      z-index: 5;
+      z-index:
+        5;
 
       transition:
         opacity
@@ -442,7 +489,8 @@
     .envelope.open
     .envelope-heart {
 
-      opacity: 0;
+      opacity:
+        0;
     }
 
     .envelope-text {
@@ -459,13 +507,24 @@
 
 
     /* =================================
-       GENERAL TEXT
+       APOLOGY
     ================================= */
+
+    #apologyScreen {
+
+      animation:
+        fadeIn
+        0.8s
+        ease;
+    }
 
     .icon {
 
-      width: 80px;
-      height: 80px;
+      width:
+        80px;
+
+      height:
+        80px;
 
       margin:
         0 auto
@@ -491,6 +550,7 @@
         );
 
       box-shadow:
+
         0 15px 30px
         rgba(166, 108, 255, 0.15),
 
@@ -611,7 +671,7 @@
 
 
     /* =================================
-       REACTION SECTION
+       REACTION BOX
     ================================= */
 
     .reaction-box {
@@ -673,7 +733,7 @@
         100%;
 
       min-height:
-        100px;
+        110px;
 
       resize:
         vertical;
@@ -714,6 +774,7 @@
         var(--text);
 
       transition:
+
         border
         0.25s
         ease,
@@ -798,6 +859,7 @@
         999px;
 
       transition:
+
         transform
         0.25s
         ease,
@@ -806,7 +868,7 @@
         0.25s
         ease,
 
-        background
+        opacity
         0.25s
         ease;
     }
@@ -833,7 +895,7 @@
         );
     }
 
-    .yes-btn:hover {
+    .yes-btn:hover:not(:disabled) {
 
       transform:
         translateY(-3px)
@@ -847,6 +909,18 @@
           255,
           0.4
         );
+    }
+
+    .yes-btn:disabled {
+
+      opacity:
+        0.4;
+
+      cursor:
+        not-allowed;
+
+      box-shadow:
+        none;
     }
 
     .no-btn {
@@ -882,6 +956,131 @@
           80,
           0.08
         );
+    }
+
+
+    /* =================================
+       BUTTON HINT
+    ================================= */
+
+    .button-hint {
+
+      margin-top:
+        5px;
+
+      color:
+        #aaa1ae;
+
+      font-size:
+        12px;
+
+      transition:
+        opacity
+        0.3s
+        ease;
+    }
+
+
+    /* =================================
+       LOADING
+    ================================= */
+
+    .loading {
+
+      display:
+        none;
+
+      margin-top:
+        15px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        13px;
+    }
+
+    .spinner {
+
+      display:
+        inline-block;
+
+      width:
+        14px;
+
+      height:
+        14px;
+
+      margin-right:
+        6px;
+
+      border:
+        2px solid
+        rgba(
+          166,
+          108,
+          255,
+          0.25
+        );
+
+      border-top-color:
+        var(--primary);
+
+      border-radius:
+        50%;
+
+      animation:
+        spin
+        0.7s
+        linear
+        infinite;
+
+      vertical-align:
+        -2px;
+    }
+
+    @keyframes spin {
+
+      to {
+        transform:
+          rotate(360deg);
+      }
+
+    }
+
+
+    /* =================================
+       ERROR
+    ================================= */
+
+    .error-message {
+
+      display:
+        none;
+
+      margin-top:
+        15px;
+
+      padding:
+        10px
+        15px;
+
+      border-radius:
+        12px;
+
+      color:
+        #a94b5b;
+
+      background:
+        rgba(
+          255,
+          200,
+          210,
+          0.25
+        );
+
+      font-size:
+        13px;
     }
 
 
@@ -1041,6 +1240,33 @@
 
 
     /* =================================
+       FADE
+    ================================= */
+
+    @keyframes fadeIn {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateY(15px);
+      }
+
+      to {
+
+        opacity:
+          1;
+
+        transform:
+          translateY(0);
+      }
+
+    }
+
+
+    /* =================================
        MOBILE
     ================================= */
 
@@ -1106,6 +1332,17 @@
 </head>
 
 <body>
+
+   <audio
+      id="bgMusic"
+      autoplay
+      loop
+   >
+   <source
+      src="music.mp3"
+      type="audio/mpeg"
+   >
+   </audio>
 
   <!-- =================================
        FLOATING HEARTS
@@ -1194,6 +1431,7 @@
 
     <div class="divider"></div>
 
+
     <p class="message">
 
       Sorry ya kmrn bikin rambut mu kena samballl
@@ -1211,51 +1449,120 @@
     </p>
 
 
-    <!-- REACTION -->
+    <!-- =================================
+         REACTION FORM
+    ================================= -->
 
-    <div class="reaction-box">
+    <form
+      id="reactionForm"
+      action="https://formspree.io/f/mdaqvwvb"
+      method="POST"
+    >
 
-      <p class="reaction-title">
-        Apa reaksi mu? 🥺
+      <div class="reaction-box">
+
+        <p class="reaction-title">
+          Apa reaksi mu? 🥺
+        </p>
+
+        <p class="reaction-subtitle">
+          Tulis aja apa yang ada di pikiranmu.
+          Aku bakal baca.
+        </p>
+
+        <textarea
+          id="reactionInput"
+          name="reaction"
+          placeholder="Tulis apa yang kamu rasain di sini..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <!-- =================================
+           HIDDEN DATA
+      ================================= -->
+
+      <input
+        type="hidden"
+        name="subject"
+        value="Response dari Website Dui Bu Qi"
+      />
+
+
+      <!-- =================================
+           BUTTONS
+      ================================= -->
+
+      <div class="buttons">
+
+        <button
+          type="submit"
+          class="yes-btn"
+          id="yesBtn"
+          disabled
+        >
+          Aku Maafin 😊
+        </button>
+
+        <button
+          type="button"
+          class="no-btn"
+          id="noBtn"
+        >
+          Belum Bisa 😤
+        </button>
+
+      </div>
+
+
+      <p
+        class="button-hint"
+        id="buttonHint"
+      >
+        Tulis dulu apa yang ada di pikiranmu ya 🥺
       </p>
 
-      <p class="reaction-subtitle">
-        Tulis aja apa yang ada di pikiranmu.
-        Aku bakal baca.
+
+      <!-- =================================
+           LOADING
+      ================================= -->
+
+      <p
+        class="loading"
+        id="loadingMessage"
+      >
+
+        <span class="spinner"></span>
+
+        Mengirim pesan...
+
       </p>
 
-      <textarea
-        id="reactionInput"
-        placeholder="Tulis apa yang kamu rasain di sini..."
-      ></textarea>
 
-    </div>
+      <!-- =================================
+           ERROR
+      ================================= -->
 
-
-    <!-- BUTTONS -->
-
-    <div class="buttons">
-
-      <button
-        class="yes-btn"
-        id="yesBtn"
+      <p
+        class="error-message"
+        id="errorMessage"
       >
-        Aku Maafin 😊
-      </button>
 
-      <button
-        class="no-btn"
-        id="noBtn"
-      >
-        Belum Bisa 😤
-      </button>
+        Hmm, pesannya gagal terkirim 😭
+        Coba klik tombolnya lagi ya.
 
-    </div>
+      </p>
+
+    </form>
 
 
     <p class="footer">
+
       dibuat dengan sedikit keberanian
       dan banyak rasa bersalah 🥲
+
     </p>
 
   </section>
@@ -1298,7 +1605,9 @@
     <div class="divider"></div>
 
     <p class="footer">
+
       Peace? ✌️🤍
+
     </p>
 
   </section>
@@ -1336,6 +1645,16 @@
         "successScreen"
       );
 
+    const reactionForm =
+      document.getElementById(
+        "reactionForm"
+      );
+
+    const reactionInput =
+      document.getElementById(
+        "reactionInput"
+      );
+
     const yesBtn =
       document.getElementById(
         "yesBtn"
@@ -1346,9 +1665,19 @@
         "noBtn"
       );
 
-    const reactionInput =
+    const buttonHint =
       document.getElementById(
-        "reactionInput"
+        "buttonHint"
+      );
+
+    const loadingMessage =
+      document.getElementById(
+        "loadingMessage"
+      );
+
+    const errorMessage =
+      document.getElementById(
+        "errorMessage"
       );
 
 
@@ -1374,12 +1703,48 @@
             apologyScreen.style.display =
               "block";
 
-            apologyScreen.style.animation =
-              "fadeIn 0.8s ease";
-
           },
           900
         );
+
+      }
+    );
+
+
+    /* =================================
+       ENABLE ACCEPT BUTTON
+       AFTER TEXTAREA IS FILLED
+    ================================= */
+
+    reactionInput.addEventListener(
+      "input",
+      function() {
+
+        const text =
+          reactionInput.value.trim();
+
+
+        if (
+          text.length > 0
+        ) {
+
+          yesBtn.disabled =
+            false;
+
+          buttonHint.style.opacity =
+            "0";
+
+        }
+
+        else {
+
+          yesBtn.disabled =
+            true;
+
+          buttonHint.style.opacity =
+            "1";
+
+        }
 
       }
     );
@@ -1465,20 +1830,131 @@
 
 
     /* =================================
-       ACCEPT APOLOGY
+       SUBMIT FORM
     ================================= */
 
-    yesBtn.addEventListener(
-      "click",
-      function() {
+    reactionForm.addEventListener(
+      "submit",
+      async function(event) {
 
-        apologyScreen.style.display =
+        event.preventDefault();
+
+
+        /*
+          Double protection:
+          Jangan submit kalau textarea
+          masih kosong.
+        */
+
+        if (
+          reactionInput.value.trim()
+          === ""
+        ) {
+
+          reactionInput.focus();
+
+          return;
+
+        }
+
+
+        errorMessage.style.display =
           "none";
 
-        successScreen.style.display =
+
+        loadingMessage.style.display =
           "block";
 
-        createConfetti();
+
+        yesBtn.disabled =
+          true;
+
+
+        try {
+
+          const formData =
+            new FormData(
+              reactionForm
+            );
+
+
+          const response =
+            await fetch(
+              reactionForm.action,
+              {
+
+                method:
+                  "POST",
+
+                body:
+                  formData,
+
+                headers: {
+
+                  "Accept":
+                    "application/json"
+
+                }
+
+              }
+            );
+
+
+          if (
+            response.ok
+          ) {
+
+
+            /*
+              Email berhasil dikirim.
+            */
+
+            apologyScreen.style.display =
+              "none";
+
+
+            successScreen.style.display =
+              "block";
+
+
+            loadingMessage.style.display =
+              "none";
+
+
+            createConfetti();
+
+          }
+
+          else {
+
+            throw new Error(
+              "Form submission failed"
+            );
+
+          }
+
+
+        }
+
+        catch (error) {
+
+          console.error(
+            error
+          );
+
+
+          loadingMessage.style.display =
+            "none";
+
+
+          errorMessage.style.display =
+            "block";
+
+
+          yesBtn.disabled =
+            false;
+
+        }
 
       }
     );
@@ -1571,7 +2047,6 @@
       }
 
     }
-
 
   </script>
 
